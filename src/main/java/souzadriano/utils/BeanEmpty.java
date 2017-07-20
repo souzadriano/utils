@@ -76,12 +76,16 @@ public class BeanEmpty {
 					return false;
 				}
 			} else if (deep && !isWrapperType(clazz)) {
-				if (isBlank(value, deep)) {
-					return true;
+				if (!isBlank(value, deep)) {
+					return false;
 				}
 			} else if (value != null) {
 				return false;
 			}
+		}
+		
+		if (props.length == 0) {
+			return bean == null;
 		}
 		return true;
 	}
