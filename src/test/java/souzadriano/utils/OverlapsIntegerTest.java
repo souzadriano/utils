@@ -1,4 +1,4 @@
-package utils;
+package souzadriano.utils;
 
 import org.junit.Assert;
 import org.junit.Test;
